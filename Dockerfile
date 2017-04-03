@@ -9,8 +9,11 @@
 #
 FROM ubuntu
 
-# Install octave
+# Install some general tools that are (normally) needed for health checks etc.
 RUN apt-get update
+RUN apt-get install -y curl
+
+# Install octave
 RUN apt-get install -y octave
 
 # Install python3
